@@ -47,6 +47,9 @@ class Router implements \Magento\Framework\App\RouterInterface
          */
         $identifier = trim($request->getPathInfo(), '/');
         if(strpos($identifier, 'my-store/') === 0) {
+            if ($request->getModuleName() == 'my-store') {
+                return;
+            }
             /*
              * We must set module, controller path and action name for our controller class(Controller/Test/Test.php)
              */
