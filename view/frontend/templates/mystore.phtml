@@ -3,10 +3,10 @@
 </div>
 
 <script type="text/javascript">
-    require(['jquery'],function($){
-        $(document).on('tagalys:ready', function() {
-            $('#tagalys-namespace').tagalys_my_store({
-                context: $('body').data('tgls-tagalys_context')
+    require(['jquery'],function(jQuery){
+        jQuery(document).on('tagalys:ready', function() {
+            jQuery('#tagalys-namespace').tagalys_my_store({
+                context: jQuery('body').data('tgls-tagalys_context')
             });
         });
     });
